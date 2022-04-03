@@ -1,0 +1,42 @@
+.slider-3{
+    height: 40vh;
+    position: relative;
+    margin: 6em 0 2em;
+}
+
+.slider-3 img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.slider-3 img.active{
+    opacity: 1;
+}
+.suivant, .precedent{
+    color: dodgerblue;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.suivant {
+    right: 1rem;
+}
+.precedent {
+    left: 1rem;
+}
+@media (max-width: 867px){
+    .suivant, .precedent{
+        display: none;
+    }
+    .slider-3{
+        margin: 9.5em 0 2em;
+    }
+}
